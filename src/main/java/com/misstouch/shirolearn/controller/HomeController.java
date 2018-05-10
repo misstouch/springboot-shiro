@@ -43,14 +43,8 @@ public class HomeController {
                 if (session!=null) {
                     SavedRequest savedRequest = (SavedRequest) session.getAttribute("shiroSavedRequest");
                     String url = savedRequest.getRequestUrl();
-                    String[] reduris = url.split("/");
-                    String reduri = reduris[reduris.length-1];
-                    return new ModelAndView(reduri);
+                    return new ModelAndView("redirect:"+url);
                 }
-
-//                if (subject.isPermitted("user:query")) {
-//                    return "userInfo";
-//                }
             }
         }
 
