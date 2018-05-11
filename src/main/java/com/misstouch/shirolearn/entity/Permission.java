@@ -14,7 +14,6 @@ import java.util.List;
  */
 @Entity
 @Table(name = "t_permission")
-
 public class Permission implements Serializable{
 
     @Id
